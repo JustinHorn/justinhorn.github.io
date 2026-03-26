@@ -1,17 +1,117 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5" />
-  <meta name="author" content="Justin" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Justin Horn — Web Developer</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
-
 <body>
-  <h1>Welcome to my website!</h1>
-</body>
+  <canvas id="bg-canvas"></canvas>
 
+  <nav id="navbar">
+    <div class="nav-logo">~/justinhorn<span class="accent">.</span>io</div>
+    <div class="nav-links">
+      <a href="#hero">Home</a>
+      <a href="#about">About</a>
+      <a href="#philosophy">Philosophy</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </nav>
+
+  <main>
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-tag">Hello, I'm</p>
+        <h1 class="hero-name">Justin Horn</h1>
+        <h2 class="hero-title">Web Developer</h2>
+        <p class="hero-sub">I build and maintain web applications — from frontend interfaces to integrations, tooling, and everything in between.</p>
+        <div class="hero-cta">
+          <a href="#contact" class="btn btn-primary">Get In Touch</a>
+          <a href="#about" class="btn btn-ghost">Learn More</a>
+        </div>
+      </div>
+      <div class="scroll-indicator">
+        <div class="scroll-line"></div>
+        <span>Scroll</span>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="section-grid">
+        <div class="section-label">
+          <span class="label-number">01</span>
+          <span class="label-text">About</span>
+        </div>
+        <div class="section-content">
+          <h2>Four years of building integration architectures, modernizing legacy apps, and shipping developer tooling.</h2>
+          <p>I've worked across the full spectrum — from a Flutter mobile app and Firebase backend at a startup, to leading refactors and introducing code conventions at a product company, to designing and maintaining integration systems, Electron apps, and CI/CD pipelines at Markup AI.</p>
+          <div class="tech-stack">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">CSS / Scss</span>
+            <span class="tech-tag">TypeScript</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">Bun</span>
+            <span class="tech-tag">Electron.js</span>
+            <span class="tech-tag">REST / GraphQL</span>
+            <span class="tech-tag">GitHub / GitLab CI/CD</span>
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Python</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="philosophy">
+      <div class="section-grid">
+        <div class="section-label">
+          <span class="label-number">02</span>
+          <span class="label-text">Philosophy</span>
+        </div>
+        <div class="section-content">
+          <blockquote>
+            "The best work happens when you respect what came before and still have the courage to change it."
+          </blockquote>
+          <p>I've spent years moving between greenfield prototypes and deeply rooted legacy systems. That taught me something: the urge to rewrite everything from scratch is almost always wrong. Real skill is understanding a codebase on its own terms, then improving it piece by piece — not burning it down.</p>
+          <p>I believe in ownership. Not the performative kind, but the quiet kind — seeing a gap, filling it, and not waiting for someone to assign it to you. Some of the work I'm proudest of started as problems nobody asked me to solve: a missing CI pipeline, a convention the team needed, a refactor that made the next six months easier for everyone.</p>
+          <p>Frontend, integrations, tooling, infrastructure — I'd rather understand the full picture than master one corner of it. Tests, conventions, and clear architecture aren't bureaucracy — they're how you build things that last beyond the sprint they shipped in.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="contact-content">
+        <h2>Let's build something.</h2>
+        <p>I'm currently open to interesting projects — whether that's a full-time role, a consulting engagement, or just a wild idea you want to explore over coffee.</p>
+        <div class="contact-links">
+          <a href="mailto:justinhorn00@proton.me" class="contact-link">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">justinhorn00@proton.me</span>
+          </a>
+          <a href="https://github.com/justinhorn" class="contact-link">
+            <span class="contact-label">GitHub</span>
+            <span class="contact-value">GitHub</span>
+          </a>
+          <a href="https://linkedin.com/in/justinhorn" class="contact-link">
+            <span class="contact-label">LinkedIn</span>
+            <span class="contact-value">LinkedIn</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script type="importmap">
+    {
+      "imports": {
+        "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+        "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+      }
+    }
+  </script>
+  <script type="module" src="main.js"></script>
+</body>
 </html>
